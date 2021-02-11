@@ -7,11 +7,14 @@ ref:
 refactors: 
 '''
 
-import utilz
+import utilz, featurez 
 from zdata import RemappedFundusImage 
 
 import numpy as  np 
 import pandas as pd 
+
+import matplotlib.pyplot as plt 
+
 import torch 
 import sklearn 
 from sklearn.compose import TransformedTargetRegressor  
@@ -87,13 +90,31 @@ class LoadImageFileTransform(STReshapeFlatten, TransformerMixin, BaseEstimator):
         return utilz.Image.fetch_and_resize_image(fp, self.size) 
 
 
-class FundusFeatureMapTransform(LoadImageFileTransform):
+class FundusFeatureMapTransform(featurez.ColorChannelzRemap,LoadImageFileTransform):
     def __init__(self, fpath_colname, size=(224,224), reshape = False, flatten=True):
-        super().__init__(fpath_colname, size=size,  reshape = reshape, flatten=flatten)  
+        super(FundusFeatureMapTransform, self).__init__(fpath_colname, size=size,  reshape = reshape, flatten=flatten)  
 
     def get_image_from_file(self, fp):
-        img = RemappedFundusImage('img', fp, resize_dim=self.size) 
-        return img.remapped_data 
+        #img = RemappedFundusImage('img', fp, resize_dim=self.size) 
+        o = LoadImageFileTransform.get_image_from_file(self, fp) 
+        print( "FETCHED: ", o.shape )
+        o = featurez.ColorChannelzRemap.remapped_data( self, o )
+        return o 
+
+class EigenzMapTransform(featurez.ComponentSelectionRemap,LoadImageFileTransform):
+    ## TODO: fix init cascade 
+    def __init__(self, fpath_colname, topn, size=(224,224), reshape = False, flatten=True):
+        LoadImageFileTransform.__init__(self, fpath_colname, size=size,  reshape = reshape, flatten=flatten)  
+        featurez.ComponentSelectionRemap.__init__(self, topn)
+        self.topn = topn 
+
+    def get_image_from_file(self, fp):
+        #img = RemappedFundusImage('img', fp, resize_dim=self.size) 
+        o = LoadImageFileTransform.get_image_from_file(self, fp) 
+        print( "Eigenz FETCHED: ", o.shape )
+        o = featurez.ComponentSelectionRemap.remapped_data( self, o )
+        print( "Eigenz: ", o.shape )
+        return o 
 
 ### TODO: refactor image dimensions calc 
 class PatchifyTransform(STReshapeFlatten, TransformerMixin, BaseEstimator):
@@ -129,6 +150,36 @@ class PatchifyTransform(STReshapeFlatten, TransformerMixin, BaseEstimator):
         return X_ 
     
 
+    ## --- Setup ylabelz based on DShortCode <<< TODO:
+
+# class YLabelzFundusTransformer(BaseEstimator, TransformerMixin):
+#     def __init__(self, dscode='dscodez_short', healthycol='Normal', undefcol='UNDEF' ): 
+#         self.healthycol = healthycol
+#         self.undefcol = undefcol
+#         self.dscodez = dscode 
+    
+#     def fit(self, X, y=None):
+#         return self
+    
+    
+#     def transform(self, X, y=None):
+#         X_ = X.copy()
+#         X_['dclass'] = 'UNDEF' 
+#         X_['dclass_v'] = 0 
+#         X_.loc[ ( X_[self.healthycol] > 0 ), ['dclass']] = 'Normal' 
+#         X_.loc[ ( X_[self.healthycol] > 0 ), ['dclass_v']] = 1 
+#         X_.loc[ (X_[self.healthycol] <= 0) & (X_[self.undefcol] <= 0), ['dclass']] = 'Sick' 
+#         X_.loc[ (X_[self.healthycol] <= 0) & (X_[self.undefcol] <= 0), ['dclass_v']] = 2
+        
+# #         X_['dclass'] = 'Not Sick' 
+# #         X_['dclass_v'] = 0  
+# #         X_.loc[ (X_[self.healthycol] != 1) & (X_[self.undefcol] != 1), ['dclass']] = 'Sick' 
+# #         X_.loc[ (X_[self.healthycol] != 1) & (X_[self.undefcol] != 1), ['dclass_v']] = 1
+#         #print(  )
+#         return X_
+    
+    
+
 
 if __name__ == '__main__': 
     fp1 = '/mnt/externz/zRepoz/datasets/fundus/stare/im0064.ppm'
@@ -136,14 +187,17 @@ if __name__ == '__main__':
     df = pd.DataFrame.from_records([[fp1, 'The quick brown fox jumped over the lazy dogs'],
                                      [fp2, "yet another image here"]
                                     ],columns=['fpath', 'extra'])
-    nx_patchez = 3
-    patch_dim = (75,75)
+    nx_patchez = 7
+    nc = 3   #int(np.sqrt(nx_patchez)) 
     origi_dim = (224, 224)
+    ipd = int(  (origi_dim[0]//nx_patchez)*nx_patchez + nx_patchez ) 
+    patch_dim = (ipd, ipd) #(75,75)
+    pca_topn = 221 
 
-    gopatch = True  
+    gopatch = False  
 
     piper = Pipeline([('fmapper', FundusFeatureMapTransform(fpath_colname='fpath', reshape = False, flatten=False)),  ##pd frame 
-                        ('patchie', PatchifyTransform( nx_patchez=nx_patchez, origi_dim=origi_dim)), ## img array/list 
+                        # ('patchie', PatchifyTransform( nx_patchez=nx_patchez, origi_dim=origi_dim)), ## img array/list 
                         ('flatten', Flattenor()), ## this is repeated as a standalone TODO: refactor at class level
                         ('scaler', StandardScaler() ),
                         ('re-imgD', ReshapeToImageD( patch_dim if gopatch else origi_dim ) ) ]) ## TODO: compute/get patch_dim: (75, 75)
@@ -157,13 +211,26 @@ if __name__ == '__main__':
         print(outiez.shape, c, pw , nx_patchez)
         _ = [print( (i*pw), " to ", ((i+1)*pw) ) for i in range(nx_patchez**2)]
         
-        utilz.Image.plot_images_list([outiez[:,:,(i*pw):((i+1)*pw) ][:,:,:3] for i in range(nx_patchez**2)], nc=3, cmap='gray')  #int(np.sqrt(nx_patchez))
+        utilz.Image.plot_images_list([outiez[:,:,(i*pw):((i+1)*pw) ][:,:,:3] for i in range(nx_patchez**2)], nc=nc, cmap='gray') 
         for cj in range( pw ):
-            utilz.Image.plot_images_list([outiez[:,:,(i*pw):((i+1)*pw) ][:,:,cj].reshape( patch_dim ) for i in range(nx_patchez**2)], nc=3, cmap='gray') #np.sqrt(nx_patchez)
+            utilz.Image.plot_images_list([outiez[:,:,(i*pw):((i+1)*pw) ][:,:,cj].reshape( patch_dim ) for i in range(nx_patchez**2)], nc=nc, cmap='gray')  
 
     else:
         co = outiez.shape[2]
         rp = -1/outiez[:,:,0:3] #* outiez[:,:,3]
-        utilz.Image.plot_images_list( [-outiez[:,:,i] for i in range(co)]+[rp,],nc=co+1, cmap='gray')  
+        utilz.Image.plot_images_list( [outiez[:,:,i] for i in range(co)]+[rp,],nc=co+1, cmap='gray')  
+     
     
+    piper = Pipeline([('fmapper', EigenzMapTransform(fpath_colname='fpath', topn=pca_topn, reshape = False, flatten=False)),  ##pd frame 
+                        # ('patchie', PatchifyTransform( nx_patchez=nx_patchez, origi_dim=origi_dim)), ## img array/list 
+                        # ('pca', featurez.ComponentSelectionRemap() ), 
+                        ('flatten', Flattenor()), ## this is repeated as a standalone TODO: refactor at class level
+                        ('scaler', StandardScaler() ),
+                        ('re-imgD', ReshapeToImageD( (pca_topn, 224) ) ) ]) ## TODO: compute/get patch_dim: (75, 75)
 
+    outiez = piper.fit_transform(df)[0]
+    co = outiez.shape[2]
+    rp = -1/outiez[:,:,0:3] #* outiez[:,:,3]
+    utilz.Image.plot_images_list( [outiez[:,:,i] for i in range(co)]+[rp,],nc=co+1, cmap=plt.cm.RdBu)  
+
+    

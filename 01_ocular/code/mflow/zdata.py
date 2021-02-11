@@ -128,7 +128,7 @@ class RemappedFundusImage(ZImage):
         o[ o != t] = 0
         return o
 
-    def vessels_channel(self, img, mtype=0):
+    def vessels_channel(self, img, mtype=2):
         o = utilz.Image.edgez(img, mtype) 
         return o
 

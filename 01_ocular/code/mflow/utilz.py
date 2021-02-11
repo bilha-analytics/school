@@ -64,6 +64,7 @@ class Image:
     
     @staticmethod
     def hist_eq(img, mtype=1): ## TODO: mtype consts
+        print("HIST_EQ_In: ", img.shape )
         p2, p98 = np.percentile(img, (2,98)) 
         mtypez = [
             (exposure.equalize_adapthist, {'clip_limit':0.03}),
@@ -74,12 +75,14 @@ class Image:
    
     @staticmethod
     def edgez(img, mtype=0): ## TODO: mytpe  
-        sharez = {} #TODO: shared params @ API setup 
+        sharez = {} #'black_ridges': False} #TODO: shared params @ API setup 
         mtypez = [
-            (filters.frangi, {'sigmas':[0,0.5,1], 'black_ridges':1}), 
+            (filters.frangi, {}), # {'sigmas':range(4,10,2), 'black_ridges':1, 'alpha':0.75}), 
+            (filters.sato, {}),
+            (filters.meijering, {})
         ]
         pmod, kargz = mtypez[mtype] 
-        return pmod(img, **kargz)
+        return pmod(img, **{**sharez, **kargz} )
 
     @staticmethod
     def denoise(img, mtype=0): ##TODO
