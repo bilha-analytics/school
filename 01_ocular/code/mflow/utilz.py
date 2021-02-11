@@ -1,3 +1,12 @@
+'''
+author: bg
+goal: 
+type: util 
+how: 
+ref: 
+refactors: 
+'''
+
 import os, time, glob #TODO: pathlib 
 import pickle 
 
@@ -20,6 +29,12 @@ class Image:
                    color.rgb2rgbcie,
                    color.rgb2xyz,
                    ]
+    @staticmethod
+    def fetch_and_resize_image(fpath, size):
+        try:
+            return Image.resize_image_dim( io.imread( fpath ), dim=size) 
+        except:
+            return None 
 
     @staticmethod
     def get_channel(img, cid): 
@@ -44,8 +59,8 @@ class Image:
         return o
     
     @staticmethod
-    def resize_image_dim(img, dim=(50,50) ):
-        return transform.resize(img, dim, anti_aliasing=True)
+    def resize_image_dim(img, dim=(50,50) ): ##TODO: aspect ratio and padding to max dim
+        return transform.resize(img, dim, anti_aliasing=True )
     
     @staticmethod
     def hist_eq(img, mtype=1): ## TODO: mtype consts
@@ -61,7 +76,7 @@ class Image:
     def edgez(img, mtype=0): ## TODO: mytpe  
         sharez = {} #TODO: shared params @ API setup 
         mtypez = [
-            (filters.frangi, {'sigmas':[1], 'black_ridges':0}), 
+            (filters.frangi, {'sigmas':[0,0.5,1], 'black_ridges':1}), 
         ]
         pmod, kargz = mtypez[mtype] 
         return pmod(img, **kargz)
@@ -72,13 +87,13 @@ class Image:
         return o
      
     @staticmethod #TODO: histo eq non-gray imagez
-    def basic_preproc_img(img, p=0.25, denoise_mtype=0): #image resize, rescale, equalize as bare minimum preprocessing
-        return Image.resize_image_perc(
-                Image.rescale_and_float(img), p 
+    def basic_preproc_img(img, dim=(50,50), denoise_mtype=0): #image resize, rescale, equalize as bare minimum preprocessing
+        return Image.resize_image_dim(
+                Image.rescale_and_float(img), dim
             )
         # return img 
     @staticmethod
-    def plot_images_list(img_list, titlez=None, nc=2, cmap=None, tstamp=False,
+    def plot_images_list(img_list, titlez=None, nc=2, cmap=None, tstamp=False, spacer=0.01, 
                          save=None , tdir=".", savedpi=800, withist=False, binz=None):
        
         if withist:   
@@ -103,7 +118,7 @@ class Image:
                 plt.hist(img.flatten()*(1/img.max()), bins=binz)
                 plt.tick_params(axis='y', which='both', labelleft=False, labelright=False) #TODO:off
                 
-        plt.subplots_adjust(wspace=0, hspace=0)
+        plt.subplots_adjust(wspace=spacer, hspace=spacer)
         
         if save:
             d = datetime.now().strftime("%H%M%S")

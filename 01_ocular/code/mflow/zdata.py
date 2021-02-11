@@ -1,3 +1,12 @@
+'''
+author: bg
+goal: 
+type: Data extractors, objects and access handlers 
+how: 
+ref: 
+refactors: 
+'''
+
 import pandas as pd 
 import numpy as np 
 
@@ -70,13 +79,14 @@ class ZModal(ZSerializableMixin):
 
 ## === Image Objects
 class ZImage(ZModal):    
-    def __init__(self, label, fpath, cleanit=True):
+    def __init__(self, label, fpath, resize_dim=(224,224), cleanit=True):
         super().__init__(label, mod_type=ZModal.TYPE_IMAGE) 
         self.fpath = fpath
+        # self.resize_dim = resize_dim  
         self.cleanit = cleanit 
         self.data = io.imread(self.fpath )
         if self.cleanit:
-            self.data = utilz.Image.basic_preproc_img(self.data) 
+            self.data = utilz.Image.basic_preproc_img(self.data, resize_dim  ) 
     
     # @property ##TODO: allow tuning cleaning paramz 
     # def clean_data(self):
@@ -99,8 +109,8 @@ class ZImage(ZModal):
 ## === Fundus Image Remapped 
 class RemappedFundusImage(ZImage):
 
-    def __init__(self, label, fpath, cleanit=True): 
-        super().__init__(label, fpath, cleanit=cleanit) 
+    def __init__(self, label, fpath, resize_dim=(224,224), cleanit=True): 
+        super().__init__(label, fpath, resize_dim, cleanit=cleanit)
     
     ## --- TODO: arch/struct these three well + decouple @clean_data Vs data
     def green_channel_update(self, img):
