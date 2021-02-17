@@ -17,7 +17,7 @@ from skimage import io, color , img_as_float, exposure, transform, filters
 
 import matplotlib.pyplot as plt 
 
-### ==== Image Utilz
+## === Image Utilz
 class Image:
 
     CLR_HSV = 0
@@ -35,10 +35,7 @@ class Image:
             return Image.resize_image_dim( io.imread( fpath ), dim=size) 
         except:
             return None 
-    @staticmethod
-    def gray_scale(img):
-        return color.rgb2gray(img) 
-        
+
     @staticmethod
     def get_channel(img, cid): 
         c = len(img.shape)
@@ -136,7 +133,7 @@ class Image:
 ### ==== FileIO 
 class FileIO:
     @staticmethod
-    def file_content(fpath, rec_parser=None, sep='\t'):
+    def file_content(fpath, has_header_row=False, rec_parser=None, sep='\t'):
         with open(fpath, 'r') as fd:
             # print( fpath )
             for rec in fd.readlines(): 
@@ -157,7 +154,6 @@ class FileIO:
     @staticmethod
     def row_parser(rec, sep='\t'):
         outiez = rec.strip().split(sep)
-        # print(outiez)
         return [x.strip() for x in outiez if len(x) > 0] ##TODO: clean up paranoia 
     
     @staticmethod
@@ -173,7 +169,3 @@ class FileIO:
         img = None 
         return outiez 
 
-### ==== Graphs/Plots
-
-
-### ==== Tabular Charts/Plots 
