@@ -15,6 +15,9 @@ from sklearn.preprocessing import FunctionTransformer
 
 from sklearn.compose import TransformedTargetRegressor  ## TODO: for ylabelz  ++ one-hot-encoding, 
 
+import torch 
+from torch.utils.data import Dataset, DataLoader 
+
 
 
 ### 1. flatten data 
@@ -53,3 +56,33 @@ class LoadImageFileTransform(TransformerMixin, BaseEstimator):
         return O_      
     def get_image_from_file(self, fp):
         return utilz.Image.fetch_and_resize_image(fp, self.resize)  
+
+## 4. tensor to numpy 
+class ToTensor(TransformerMixin, BaseEstimator):
+    def fit(self, X, y=None):
+        return self
+    def transform(self, X, y=None):
+        return [ torch.tensor(x) for x in X]  ## TODO: list of tensors or tensor of tensors??
+
+## 5. to dataloader << TODO: torch.transforms + sync@PdDataStats and/or content.py 
+class ListToDataLoader(TransformerMixin, BaseEstimator):
+    # train_data = torch.utils.data.TensorDataset(x_train, y_train)
+    # train_loader = torch.utils.data.DataLoader(train_data, batch_size=self.batch_size, shuffle=self.shuffle)
+        
+    class ZDSet(Dataset): ## TODO: ownership and reuse 
+        def __init__(self, listing):
+            self.listing = listing  
+        def __len__(self):
+            return len(self.listing) 
+        def __getitem__(self, idx):
+            if torch.is_tensor(idx):
+                idx = idx.tolist()
+            return self.listing[idx] 
+            
+    def __init__(self, kwargz): #batchsize=64, shuffle=True, n_workers=6 
+        self.kwargz = kwargz
+    def fit(self, X, y=None):
+        return self
+    def transform(self, X, y=None):
+        O_ = DataLoader( ZDSet(X), **self.kwargz ) 
+        return O_  ## TODO: list of tensors or tensor of tensors??
