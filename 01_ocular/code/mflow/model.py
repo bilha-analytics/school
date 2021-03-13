@@ -193,9 +193,10 @@ class ZTrainingManager():
         O_ = []
         for i in range( len( self.permutationz ) ):
             o = self._run_permutation(i, train_X, train_y ) 
-            O_.append( o ) 
+            p = f"Perm_{i+1}"  
+            O_.append( [p,*o] ) 
             # print("<<<<<<<\n", o, "\n>>>>>>>>")
-            ZReporter.add_log_entry( ZTrainingManager.MSG_GSEARCH_RESULTS(f"Perm_{i+1}", o[0], *[str(i) for i in o[1:]]) ) 
+            ZReporter.add_log_entry( ZTrainingManager.MSG_GSEARCH_RESULTS(f"{p} {o[0]}", o[1], *[str(i) for i in o[2:]]) ) 
 
         ## 3. test/validate 
 
@@ -210,9 +211,13 @@ class ZTrainingManager():
             for k, v in gp.items():
                 O_[ f"model_pipe__{m}__{k}" ] = v
             print(f"\n\n***********{m}***********") 
-            return O_ 
+            return O_ , m
 
-        g_paramz = update_gsearch_param_keys(model_pipe, g_paramz)
+        g_paramz , m_name = update_gsearch_param_keys(model_pipe, g_paramz)
+        
+        # print( data_pipe )
+        dz = "__".join([str(x[0]) for x in data_pipe.steps]) 
+        m_name = f"{m_name} {dz}"
 
         piper = Pipeline([ ('data_pipe', data_pipe),
                             ('model_pipe', model_pipe)])
@@ -225,7 +230,7 @@ class ZTrainingManager():
                                 return_train_score=True) 
         gsearch.fit(X, y) 
 
-        return (gsearch.best_score_, gsearch.best_estimator_ , gsearch.best_params_)
+        return (m_name, gsearch.best_score_, gsearch.best_estimator_ , gsearch.best_params_)
 
     def _save_best_model(self): ## TODO
         pass 

@@ -143,15 +143,18 @@ class EigenzChannelz(TransformerMixin, BaseEstimator):
         self.component_selector = m(n_components=topn, **kargz)
 
     def _get_op_channel(self, x):
-        c = len(x[0].shape)
+        c = len(x.shape) 
         if c <= 2:
-            return x
+            o = x
         else:
-            return [c[:,:,self.g_channel] for c in x] 
+            o = x[:,:,self.g_channel] #[for c in x] 
+        # print( f"From {c} to {o.shape }")
+        return o.flatten()  #.reshape(1, -1) #
 
     def fit(self, X, y=None):
         ## first fit component_selector before transform 
         self.component_selector.fit( [self._get_op_channel(x) for x in X]  )  ## np.vectorize 
+        print("**** FIN FIT ****")
         return self 
 
     def transform(self, X, y=None):
@@ -161,13 +164,24 @@ class EigenzChannelz(TransformerMixin, BaseEstimator):
     # per channel 
     def remapped_data(self, img): ## appends to the stack unless otherwise 
         ### TODO: per channel for now operating on one channel only but can append that to the original imag
-        print("FIN-Egz: In: ", img.shape, " Out: ", o.shape ) e sent in
+        x,y, c = img.shape 
+
+        o = self._get_op_channel(img) 
+
+        to = self.component_selector.transform([o,])[0]
+
+        tx =  int( len(to)  * 0.5 * (x/y) )
+        to = to.reshape( (tx, -1) )
+        o = np.zeros((x,y))
+        # print( f"len = {len(to)}, tx = {tx}, to={to.shape} for img={img.shape} on o={o.shape}")
+        ox,oy = to.shape 
+        o[:ox, :oy] = to 
+        
+        # print("FIN-Egz: In: ", img.shape, " Out: ", o.shape , " on to=", to.shape) 
+        
         if len(img.shape) <= 2:
-            o = self.component_selector.transform(img) 
             return np.dstack([img, o]) if self.append_component else o 
         else:
-            _,_, c = img.shape 
-            o = self.component_selector.transform(self._get_op_channel(img) ) 
             return np.dstack([*[img[:,:,i] for i in range(c)], o]) if self.append_component else o  
 
     
