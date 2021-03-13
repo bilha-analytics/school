@@ -9,11 +9,17 @@ refactors:
 
 import utilz
 
+from skimage import img_as_ubyte, img_as_float
+import numpy as np
+
 from sklearn.base import TransformerMixin, BaseEstimator 
+from sklearn.decomposition import PCA 
+
+from skimage.feature import local_binary_pattern
 
 ### TODO: remapped_data home/owner/mixin + save to file + skip/shortcuts use implications 
 ### ==== 1. Fundus  Color channelz ==== << TODO: beyond fundus 
-class FundusColorChannelz(TransformerMixin, BaseEstimator):
+class ColorChannelz(TransformerMixin, BaseEstimator):
     # def __init__(self):
     #     pass 
 
@@ -28,26 +34,41 @@ class FundusColorChannelz(TransformerMixin, BaseEstimator):
     def _get_channel_eq(self, img, c=-1): ## -1 is on gray scale 
         return utilz.Image.hist_eq( utilz.Image.get_channel(img, c) ) if c >= 0 \
             else utilz.Image.hist_eq( utilz.Image.gray_scale(img) )
-
+      
+    def remapped_data(self, img):  
+        return self._get_channel_eq(img, 1) 
+ 
+class FundusColorChannelz(ColorChannelz): 
+    # def __init__(self):
+    #     pass 
+    
+    ## --- TODO: arch/struct these three well + decouple @clean_data Vs data 
     def _green_channel_update(self, img):
         return self._get_channel_eq(img, 1) 
 
     def _red_channel_update(self, img, thresh=0.97):
         o = self._get_channel_eq(img, 0) 
         rrange = o.max() - o.min() 
-        o[ (o - o.min()/rrange) < thresh ] = 0
-        return o 
+        o[ (o - o.min()/rrange) < thresh ] = 0        
+        return o  
 
     def _blue_channel_update(self, img, thresh=1): 
-        o = self._get_channel_eq(img, 2)  
-        t = 1 if (thresh == 1 and o.max()==255) else (1/255) ##TODO: change o.max to dtype check + else case blue is lost;recompute thresh
-        o[ o != t] = 0
-        return o
+        o = img_as_ubyte(img[:,:,-1].copy() )
+        # print( o.min(), o.max() ) 
+        o[ o!= thresh] = 0 #(thresh-o.min()+0.00001)/(o.max() - o.min())] = 0         
+        o[ o == thresh] = 255   
+        #o = utilz.Image.hist_eq( o )
 
-    def _vessels_channel(self, img, mtype=2):
+        # o = self._get_channel_eq(img, 2)  
+        # _omax = o.max() 
+        # t = 1 if (thresh == 1 and o.max()==255) else (1/_omax) ##TODO: change o.max to dtype check + else case blue is lost;recompute thresh
+        # o[ o != t] = 0
+        return img_as_float(o) #.astype('uint8')
+
+    def _vessels_channel(self, img, mtype=0):
         o = self._get_channel_eq(img, 2) ## on green channel 
-        o = utilz.Image.edgez(o, mtype) 
-        return o
+        o = utilz.Image.edgez(o, mtype) #* 255
+        return o #.astype('uint8')
     
     def remapped_data(self, img): 
         outiez = []
@@ -62,6 +83,37 @@ class FundusColorChannelz(TransformerMixin, BaseEstimator):
         # 4. combine color channelz
         o = np.dstack(outiez) 
         return o 
+
+
+class FundusAddLBP(ColorChannelz):
+
+    def __init__(self, g_channel, lbp_radius = 1, lbp_method = 'uniform'):
+        super(FundusAddLBP, self).__init__()  
+        self.g_channel = g_channel 
+        self.lbp_radius = lbp_radius 
+        self.lbp_k = 8*lbp_radius
+        self.lbp_method = lbp_method         
+
+    def remapped_data(self, img):
+        O_ = []
+        o = img[:,:, self.g_channel]  
+        o = local_binary_pattern( o, self.lbp_k, self.lbp_radius, self.lbp_method)
+        
+        c = img.shape[2]
+        O_.append( o )
+        O_ += [ img[:,:,i] for i in range(c)] 
+        return np.dstack(O_) 
+
+# Filter
+class ChannelzSelector(TransformerMixin, BaseEstimator):
+    def __init__(self, ls_channelz=(1,)):
+        self.ls_channelz = ls_channelz 
+
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X, y=None):
+        return [ x[:,:,self.ls_channelz] for x in X] 
 
 ### ==== 2. Eigenz ==== 
 ## EigenFeatures/Matrix Decomposition component selection based -- SVD, PCA, Selection 
@@ -81,45 +133,42 @@ class EigenzChannelz(TransformerMixin, BaseEstimator):
         (PCA, {'svd_solver': 'randomized', 'whiten':True} ) 
     ]
 
-    def __init__(self, topn, mtype=TYPE_PCA, mlevel=PER_CHANNEL):
+    def __init__(self, g_channel, topn, mtype=TYPE_PCA, mlevel=PER_CHANNEL, append_component=True):
+        self.g_channel = g_channel 
         self.topn = topn 
         self.mtype = mtype 
         self.mlevel = mlevel 
+        self.append_component = append_component 
         m, kargz = self._selectorz[mtype] 
         self.component_selector = m(n_components=topn, **kargz)
 
+    def _get_op_channel(self, x):
+        c = len(x[0].shape)
+        if c <= 2:
+            return x
+        else:
+            return [c[:,:,self.g_channel] for c in x] 
+
     def fit(self, X, y=None):
         ## first fit component_selector before transform 
-        self.component_selector.fit( X ) 
+        self.component_selector.fit( [self._get_op_channel(x) for x in X]  )  ## np.vectorize 
         return self 
 
     def transform(self, X, y=None):
         ## first fit component_selector before transform 
-        return [self.remapped_data(x) for x in X]  
+        return [self.remapped_data(x) for x in X ]   
         
     # per channel 
-    def remapped_data(self, img):         
-        x, y, c = img.shape 
-        nx, ny = self.topn, -1 #int(np.sqrt(self.topn)), -1 ##TODO: check compute
-        def trans(img):
-            print("Egz: In: ", img.shape, " Goal: ", (nx, ny), " of ", self.topn )  
-            t = self.component_selector.transform(img )  # .flatten() ### TODO: fit on who and then only transform per 
-            t = t.reshape( (nx, ny) ) ## (topn, h, w)  ##TODO: sense check 
-            return t 
-        ## do per channel seperately or not TODO: sense check flow 
-        o = img.copy() 
-        if len(img.shape) == 2 or self.mlevel == ComponentSelectionRemap.PER_FULLIMG:
-            o = trans(img) 
-        else: 
-            O_ = []
-            for i in range(c):
-                O_.append( trans(img[:,:,i] ) ) 
-            
-            if self.mlevel == ComponentSelectionRemap.PER_FULLIMG:
-                O_.append( trans(img.flatten()) ) 
-            o = np.dstack( O_ ) 
-        print("FIN-Egz: In: ", img.shape, " Out: ", o.shape ) 
-        return o 
+    def remapped_data(self, img): ## appends to the stack unless otherwise 
+        ### TODO: per channel for now operating on one channel only but can append that to the original imag
+        print("FIN-Egz: In: ", img.shape, " Out: ", o.shape ) e sent in
+        if len(img.shape) <= 2:
+            o = self.component_selector.transform(img) 
+            return np.dstack([img, o]) if self.append_component else o 
+        else:
+            _,_, c = img.shape 
+            o = self.component_selector.transform(self._get_op_channel(img) ) 
+            return np.dstack([*[img[:,:,i] for i in range(c)], o]) if self.append_component else o  
 
     
 ### ==== 3. Patchify ==== <<< overlapping or not 
@@ -137,23 +186,5 @@ class PatchifyChannelz(TransformerMixin, BaseEstimator):
         return [self.remapped_data(x) for x in X]  
 
     def remapped_data(self, img):
-        x, y, c = img.shape  
-        padded_wx = ((x//self.nx_patchez)*self.nx_patchez)  + self.nx_patchez 
-        padded_hy = ((y//self.nx_patchez)*self.nx_patchez) + self.nx_patchez 
-
-        oimg = np.zeros( (padded_wx, padded_hy, c) ) 
-        print(oimg.shape) 
-
-        oimg[:x, :y, :] = img 
-
-        O_ = []
-        px = padded_wx//self.nx_patchez
-        py = padded_hy//self.nx_patchez
-        for i in range(self.nx_patchez): 
-            for j in range(self.nx_patchez):                 
-                O_.append( oimg[ (i*px):((i+1)*px), (j*py):((j+1)*py), :] ) 
-        O_ = np.dstack(O_)  
-        print('patch.dim: ', O_.shape )
-        
-        return O_ 
+        return utilz.Image.patchify_image(img, self.nx_patchez) 
 

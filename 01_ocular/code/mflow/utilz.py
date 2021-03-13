@@ -9,6 +9,7 @@ refactors:
 
 import os, time, glob #TODO: pathlib 
 import pickle 
+from datetime import datetime
 
 import numpy as np 
 
@@ -30,9 +31,10 @@ class Image:
                    color.rgb2xyz,
                    ]
     @staticmethod
-    def fetch_and_resize_image(fpath, size):
+    def fetch_and_resize_image(fpath, size=None):
         try:
-            return Image.resize_image_dim( io.imread( fpath ), dim=size) 
+            img = io.imread( fpath )
+            return img if size is None else Image.resize_image_dim( img, dim=size)
         except:
             return None 
     @staticmethod
@@ -67,7 +69,7 @@ class Image:
     
     @staticmethod
     def hist_eq(img, mtype=1): ## TODO: mtype consts
-        print("HIST_EQ_In: ", img.shape )
+        # print("HIST_EQ_In: ", img.shape )
         p2, p98 = np.percentile(img, (2,98)) 
         mtypez = [
             (exposure.equalize_adapthist, {'clip_limit':0.03}),
@@ -80,7 +82,8 @@ class Image:
     def edgez(img, mtype=0): ## TODO: mytpe  
         sharez = {} #'black_ridges': False} #TODO: shared params @ API setup 
         mtypez = [
-            (filters.frangi, {}), # {'sigmas':range(4,10,2), 'black_ridges':1, 'alpha':0.75}), 
+            (filters.frangi, {'sigmas':range(1, 9, 2), 'gamma':15, 
+                                'alpha':0.5, 'beta':0.5,}), # {'sigmas':range(4,10,2), 'black_ridges':1, 'alpha':0.75}), 
             (filters.sato, {}),
             (filters.meijering, {})
         ]
@@ -112,7 +115,7 @@ class Image:
         ## image rows
         for i, img in enumerate(img_list):
             plt.subplot(nr, nc, (i+1) )
-            plt.imshow( img, cmap=cmap)
+            plt.imshow( img, cmap=cmap)  #.astype('uint8')
             plt.axis('off')
             if titlez and (i<len(titlez)):
                 plt.title( f"{titlez[i]}" ) #min(i, len(titlez)-1)
@@ -129,9 +132,31 @@ class Image:
         if save:
             d = datetime.now().strftime("%H%M%S")
             fnout = f"{d}_{save}" if tstamp else f"{save}"
-            plt.savefig(f"{tdir}/{fnout}.png", dpi=savedpi)
+            plt.savefig(f"{tdir}/{fnout}.png", dpi=savedpi, 
+                    facecolor='white', edgecolor='none', transparent=False)
         
         plt.show();
+
+    @staticmethod 
+    def patchify_image(img, nx_patches):
+        x, y, c = img.shape  
+        padded_wx = ((x//nx_patchez)*nx_patchez)  + nx_patchez 
+        padded_hy = ((y//nx_patchez)*nx_patchez) + nx_patchez 
+
+        oimg = np.zeros( (padded_wx, padded_hy, c) ) 
+        print(oimg.shape) 
+
+        oimg[:x, :y, :] = img 
+
+        O_ = []
+        px = padded_wx//nx_patchez
+        py = padded_hy//nx_patchez
+        for i in range(nx_patchez): 
+            for j in range(nx_patchez):                 
+                O_.append( oimg[ (i*px):((i+1)*px), (j*py):((j+1)*py), :] ) 
+        O_ = np.dstack(O_)  
+        print('patch.dim: ', O_.shape )
+        
     
 ### ==== FileIO 
 class FileIO:

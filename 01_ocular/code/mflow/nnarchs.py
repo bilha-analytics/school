@@ -15,6 +15,8 @@ import torch.nn.functional as F
 
 import torch.optim as optim
 
+from report import ZReporter 
+
 
 class ZNNArchitecture(nn.Module):
     ## layers, weights, forward, 
@@ -53,8 +55,8 @@ class ZNNArchitecture(nn.Module):
         if self.weights_initor is not None:
             self.apply( init_weights )
 
-    def forward(self, x):
-        # print(type(x), x.shape, x) 
+    def forward(self, x): ## TODO: layers = (nn.layer, activation, activation params)
+        # print(type(x), x.shape) 
         n = len(self.modules_list)
         for i, m in enumerate(self.modules_list): 
             # print( f"{i+1}: {m}")
@@ -65,6 +67,7 @@ class ZNNArchitecture(nn.Module):
             elif self.h_activation is not None:
                 x = self.h_activation(x) 
             ## 2. TODO: check if should flatten or not 
+        # print("AFTER.FWD: ", x.shape)
         return x 
 
 
