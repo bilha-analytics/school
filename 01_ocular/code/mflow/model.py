@@ -7,6 +7,8 @@ ref:
 refactors: 
 '''
 
+from tqdm import tqdm
+
 from sklearn.base import BaseEstimator 
 from sklearn.base import ClassifierMixin, RegressorMixin, ClusterMixin
 from sklearn.pipeline import Pipeline 
@@ -171,7 +173,7 @@ class ZTrainingManager():
                 self.permutationz.append( (data_pipez[i], model_pipez[j]) ) 
 
     ### === run training with skl.grid search on each permutation 
-    def run(self, data_X, data_y = None, train_test_split=1., save_best=False): 
+    def run(self, data_X, data_y = None, train_test_split=1., save_best=False, log=False): 
         ## for each permutation apply data and grid search
 
         ## 1. Deal data allocation TODO: when to train_test split 
@@ -181,9 +183,11 @@ class ZTrainingManager():
             train_y, test_y = [], [] ## hack for print :/
             if data_y is not None:
                 train_y, test_y = data_y[:n_train], data_y[n_train:]  
-                print( type(train_y[0]), train_y[0].shape )
-            print( type(train_X[0]), train_X[0].shape )
-            print(f"Train-Test-Split {train_test_split}: train = {len(train_X)}, {len(train_y)} \t test = {len(test_X)}, {len(test_y)}")
+                if log:
+                    print( type(train_y[0]), train_y[0].shape )
+            if log:
+                print( type(train_X[0]), train_X[0].shape )
+                print(f"Train-Test-Split {train_test_split}: train = {len(train_X)}, {len(train_y)} \t test = {len(test_X)}, {len(test_y)}")
         else: ## TODO: dataloader, Zdataset
             train_X, train_y  = data_X, data_y
             test_X, test_y  = [], []
@@ -191,7 +195,7 @@ class ZTrainingManager():
         
         ## 2. train 
         O_ = []
-        for i in range( len( self.permutationz ) ):
+        for i in tqdm( range( len( self.permutationz ) ) ):
             o = self._run_permutation(i, train_X, train_y ) 
             p = f"Perm_{i+1}"  
             O_.append( [p,*o] ) 
@@ -202,7 +206,7 @@ class ZTrainingManager():
 
         return O_ 
 
-    def _run_permutation(self, idx, X, y ):
+    def _run_permutation(self, idx, X, y , log=False):
         data_pipe, model_pipe = self.permutationz[ idx]
         model_pipe, g_paramz = model_pipe 
         def update_gsearch_param_keys(mp, gp):
@@ -210,7 +214,8 @@ class ZTrainingManager():
             m = mp.steps[-1][0]
             for k, v in gp.items():
                 O_[ f"model_pipe__{m}__{k}" ] = v
-            print(f"\n\n***********{m}***********") 
+            if log:
+                print(f"\n\n***********{m}***********") 
             return O_ , m
 
         g_paramz , m_name = update_gsearch_param_keys(model_pipe, g_paramz)

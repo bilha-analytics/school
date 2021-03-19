@@ -118,7 +118,7 @@ class Image:
             plt.imshow( img, cmap=cmap)  #.astype('uint8')
             plt.axis('off')
             if titlez and (i<len(titlez)):
-                plt.title( f"{titlez[i]}" ) #min(i, len(titlez)-1)
+                plt.title( f"{titlez[i]}", fontsize=12 ) #min(i, len(titlez)-1)
         
         ## histo rows 
         if withist:      

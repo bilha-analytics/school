@@ -37,7 +37,8 @@ class ZReporter:
 
     
     @staticmethod
-    def start(name=None): 
+    def start(name=None, log_screen=True):  
+        ZReporter.LOG = log_screen 
         if ZReporter.worker is None:
             ZReporter.worker = ZReporter.ZWorker(name) 
         ZReporter.worker.start()

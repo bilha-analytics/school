@@ -10,6 +10,7 @@ refactors:
 import utilz
 
 from skimage import img_as_ubyte, img_as_float
+from skimage import color as sk_color
 import numpy as np
 
 from sklearn.base import TransformerMixin, BaseEstimator 
@@ -35,12 +36,31 @@ class ColorChannelz(TransformerMixin, BaseEstimator):
         return utilz.Image.hist_eq( utilz.Image.get_channel(img, c) ) if c >= 0 \
             else utilz.Image.hist_eq( utilz.Image.gray_scale(img) )
       
+    def _get_color_eq(self, img):
+        ## rgb to lab --> equalize l --> lab to rgb  <<< TODO: move to utilz         
+        o = sk_color.rgb2lab( img ) 
+        eq_l = self._get_channel_eq(o, 0) 
+        o = np.dstack( [eq_l, o[:,:,1], o[:,:,2]])
+        return sk_color.lab2rgb( o )
+
     def remapped_data(self, img):  
         return self._get_channel_eq(img, 1) 
  
-class FundusColorChannelz(ColorChannelz): 
-    # def __init__(self):
-    #     pass 
+### TODO: at choice of cleaning
+class OrigiCleanedChannelz(ColorChannelz): 
+    def remapped_data(self, img):  ## simply clahe something something 
+        o = [self._get_channel_eq(img, i) for i in range(3)] 
+        # if len(img.shape) <= 2:
+        #     return np.dstack([img, o]) if self.append_component else o 
+        # else:
+        #     return np.dstack([*[img[:,:,i] for i in range(c)], o]) if self.append_component else o  
+
+        return np.dstack(o) 
+
+class FundusColorChannelz(ColorChannelz):  
+    def __init__(self, add_origi=True ):
+        super(FundusColorChannelz, self).__init__()  
+        self.add_origi = add_origi   
     
     ## --- TODO: arch/struct these three well + decouple @clean_data Vs data 
     def _green_channel_update(self, img):
@@ -80,7 +100,10 @@ class FundusColorChannelz(ColorChannelz):
         outiez.append( self._green_channel_update( img )  ) 
         outiez.append( self._red_channel_update( img ) )
         outiez.append( self._blue_channel_update( img ) )   
-        # 4. combine color channelz
+        # 4.  append origi as cleaned only 
+        if self.add_origi:
+            _ = [outiez.append(self._get_color_eq(img) ) for i in range(3)]  
+        # 5. combine color channelz
         o = np.dstack(outiez) 
         return o 
 
@@ -154,7 +177,7 @@ class EigenzChannelz(TransformerMixin, BaseEstimator):
     def fit(self, X, y=None):
         ## first fit component_selector before transform 
         self.component_selector.fit( [self._get_op_channel(x) for x in X]  )  ## np.vectorize 
-        print("**** FIN FIT ****")
+        # print("**** FIN FIT ****")
         return self 
 
     def transform(self, X, y=None):
