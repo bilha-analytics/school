@@ -9,7 +9,7 @@ refactors:
 
 import utilz
 
-from skimage import img_as_ubyte, img_as_float
+from skimage import img_as_ubyte, img_as_float, img_as_uint
 from skimage import color as sk_color
 import numpy as np
 
@@ -32,16 +32,62 @@ class ColorChannelz(TransformerMixin, BaseEstimator):
 
     
     ## --- TODO: arch/struct these three well + decouple @clean_data Vs data
-    def _get_channel_eq(self, img, c=-1): ## -1 is on gray scale 
-        return utilz.Image.hist_eq( utilz.Image.get_channel(img, c) ) if c >= 0 \
-            else utilz.Image.hist_eq( utilz.Image.gray_scale(img) )
-      
+    def _get_channel_eq(self, img, c=-1, eq_mtype=1): ## -1 is on gray scale 
+        return utilz.Image.hist_eq( utilz.Image.get_channel(img, c), mtype=eq_mtype ) if c >= 0 \
+            else utilz.Image.hist_eq( utilz.Image.gray_scale(img), mtype=eq_mtype  )
+    
+    def _get_lab_img(self, img, extractive=True): 
+        o = sk_color.rgb2lab( img ) 
+        if extractive:
+            l = o[:,:,0]
+            ## bluez are -ves, redz are positivez
+            b = o[:,:,-1]
+            b[ b >=0 ] = 0
+            ## QUE: add back yellow to red or not ?? << does it seem to be useful << TODO: review
+            r = o[:,:,1]
+            # y = r.copy()
+            # y[y>=0] = 0
+            # process red
+            r[r <= 0 ] = 0
+            # add back yellow
+            # r = r*y 
+            o = np.dstack([l,r,b])  
+        # normalize-ish :/ <<< TODO: fix 
+        abs_max = np.max( np.abs( o ) ) 
+        o = o/abs_max
+        return o 
+
+    ## TODO: Thresholding
+    def _get_yellow_from_rgb2lab(self, img):
+        o = sk_color.rgb2lab( img )  
+        ##yellow is in A and is -ves
+        o = o[:,:,1]
+        o[o >= 0 ] = 0
+        o = -1 * o 
+        # normalize-ish :/ <<< TODO: fix 
+        abs_max = np.max( np.abs( o ) ) 
+        o = o/abs_max
+        return o 
+
+    def _lab_to_rgb(self, img):
+        return sk_color.lab2rgb( img ) 
+
     def _get_color_eq(self, img):
         ## rgb to lab --> equalize l --> lab to rgb  <<< TODO: move to utilz         
-        o = sk_color.rgb2lab( img ) 
-        eq_l = self._get_channel_eq(o, 0) 
-        o = np.dstack( [eq_l, o[:,:,1], o[:,:,2]])
-        return sk_color.lab2rgb( o )
+        ## REF: d-hazing and underwater images 
+        # 1. LAB color space intensity Vs luminous 
+        # a. rgb2lab -> clahe(l) -> lab2rgb
+        # o = sk_color.rgb2lab( img ) 
+        # eq_l = self._get_channel_eq( img_as_uint(o), 0, eq_mtype=0) 
+        # o = np.dstack( [eq_l, o[:,:,1], o[:,:,2]])
+        # ## b. rgb2gray -> gradient smooth -> gray to rgb 
+        # o = sk_color.lab2rgb( o ) 
+
+        ## 2. CLAHE/CStreching per channel 
+        o = [self._get_channel_eq(img, i, eq_mtype=1) for i in range(3)] 
+        o = np.dstack(o) 
+
+        return o
 
     def remapped_data(self, img):  
         return self._get_channel_eq(img, 1) 
@@ -50,32 +96,51 @@ class ColorChannelz(TransformerMixin, BaseEstimator):
 class OrigiCleanedChannelz(ColorChannelz): 
     def remapped_data(self, img):  ## simply clahe something something 
         o = [self._get_channel_eq(img, i) for i in range(3)] 
+        o = np.dstack(o) 
         # if len(img.shape) <= 2:
         #     return np.dstack([img, o]) if self.append_component else o 
         # else:
         #     return np.dstack([*[img[:,:,i] for i in range(c)], o]) if self.append_component else o  
 
-        return np.dstack(o) 
+        return self._get_color_eq(img)
 
 class FundusColorChannelz(ColorChannelz):  
-    def __init__(self, add_origi=True ):
+    
+    def __init__(self, add_origi=True , red_thresh=0.97, color_space='rgb'):
         super(FundusColorChannelz, self).__init__()  
         self.add_origi = add_origi   
+        self.red_thresh = red_thresh 
+        self.color_space = color_space 
     
     ## --- TODO: arch/struct these three well + decouple @clean_data Vs data 
     def _green_channel_update(self, img):
         return self._get_channel_eq(img, 1) 
 
     def _red_channel_update(self, img, thresh=0.97):
+        # if self.color_space == 'lab':
+        #     ## redz are positives 
+        #     o = self._get_channel_eq(img, 1) 
+        #     rrange = o.max() - o.min() 
+        #     o[ (o - o.min()/rrange) < thresh ] = 0   
+        # else:
         o = self._get_channel_eq(img, 0) 
         rrange = o.max() - o.min() 
-        o[ (o - o.min()/rrange) < thresh ] = 0        
+        o[ (o - o.min()/rrange) < thresh ] = 0   
         return o  
 
     def _blue_channel_update(self, img, thresh=1): 
+        # if self.color_space == 'lab':
+        #     o = img[:,:,-1].copy()
+        #     # print( o.min(), o.max() ) 
+        #     # 2. now threshold the blue <<< TODO: auto-find the 'unfazzed' pixel <<<< TODO: Is LAB giving more color infor that we can do spectral analysis on or is best jut for pulling out intensity without affecting luminance
+        #     o = img_as_ubyte(o)
+        #     o[ o != thresh] = 0 #(thresh-o.min()+0.00001)/(o.max() - o.min())] = 0         
+        #     o[ o == thresh] = 255  
+
+        # else:
         o = img_as_ubyte(img[:,:,-1].copy() )
         # print( o.min(), o.max() ) 
-        o[ o!= thresh] = 0 #(thresh-o.min()+0.00001)/(o.max() - o.min())] = 0         
+        o[ o != thresh] = 0 #(thresh-o.min()+0.00001)/(o.max() - o.min())] = 0         
         o[ o == thresh] = 255   
         #o = utilz.Image.hist_eq( o )
 
@@ -92,18 +157,33 @@ class FundusColorChannelz(ColorChannelz):
     
     def remapped_data(self, img): 
         outiez = []
-        # 1. resize, equalize, rescale-float :@: using self.clean_data 
-        #img = utilz.Image.hist_eq(self.gray) 
-        # 2. vessels
-        outiez.append( self._vessels_channel(img ) )  
-        # 3. color channelz
+    
+        # 1. vessels --- using green channel 
+        outiez.append( self._vessels_channel(img ) ) 
+
+        # 2. Color INFO
+        # 2a. Green Channel clean up @ contrast and full info 
         outiez.append( self._green_channel_update( img )  ) 
-        outiez.append( self._red_channel_update( img ) )
+
+        # # 2b. RGB Vs LAB @ red and blue spectrum 
+        # if self.color_space == 'lab':
+        #     cimg = self._get_lab_img( img )
+        # else: 
+        #     cimg = img #.copy() 
+        # outiez.append( self._red_channel_update( cimg , self.red_thresh) )
+        # outiez.append( self._blue_channel_update( img ) )   
+
+        ## For Now Run RGB blue  and LAB red <<< TODO add switch 
+        outiez.append( self._red_channel_update(  self._get_lab_img( img ) , self.red_thresh) )
         outiez.append( self._blue_channel_update( img ) )   
-        # 4.  append origi as cleaned only 
+
+        # append yellow for pigmentation
+        outiez.append( self._get_yellow_from_rgb2lab(img) )
+
+        # 3.  append origi as cleaned only 
         if self.add_origi:
             _ = [outiez.append(self._get_color_eq(img) ) for i in range(3)]  
-        # 5. combine color channelz
+        # 4. combine color channelz
         o = np.dstack(outiez) 
         return o 
 

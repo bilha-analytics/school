@@ -103,7 +103,7 @@ class Image:
         # return img 
     @staticmethod
     def plot_images_list(img_list, titlez=None, nc=2, cmap=None, tstamp=False, spacer=0.01, 
-                         save=None , tdir=".", savedpi=800, withist=False, binz=None):
+                         save=None , tdir=".", savedpi=800, withist=False, binz=None, tfont=3):
        
         if withist:   
             n = len(img_list)*2
@@ -118,7 +118,7 @@ class Image:
             plt.imshow( img, cmap=cmap)  #.astype('uint8')
             plt.axis('off')
             if titlez and (i<len(titlez)):
-                plt.title( f"{titlez[i]}", fontsize=12 ) #min(i, len(titlez)-1)
+                plt.title( f"{titlez[i]}", fontsize=tfont ) #min(i, len(titlez)-1)
         
         ## histo rows 
         if withist:      

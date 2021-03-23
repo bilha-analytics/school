@@ -30,6 +30,9 @@ import nnarchs
 from zdata import ZSerializableMixin 
 from report import ZReporter
 
+import cv2 ## K-Means Clustering 
+
+
 class ZModel(ZSerializableMixin, BaseEstimator): ## TODO: VS internal class for nn.Module subclassing  <<< subClassing Vs has-a 
     ## cuda, optimizer, loss, evaluate 
     
@@ -149,6 +152,16 @@ class ZModel(ZSerializableMixin, BaseEstimator): ## TODO: VS internal class for 
 
         return yhat 
 
+
+class ZModelKMeans(ZSModel): 
+    def __init__(self):
+        pass
+
+    def train(self, X_train):
+        pass 
+
+    def predict(self, X_):
+        pass 
 
 ### --- TBD: Skorch == sklearn + pytorch already! for now i want to moi-flow 
 ### --- TODO: Captum == Model intepretability for PyTorch 
