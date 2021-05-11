@@ -1,0 +1,948 @@
+[[
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101906785"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101906785?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85101906785&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85101906785&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S156625352100035X"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85101906785",
+        "dc:identifier": "SCOPUS_ID:85101906785",
+        "eid": "2-s2.0-85101906785",
+        "dc:title": "A review of multimodal image matching: Methods and applications",
+        "dc:creator": "Jiang X.",
+        "prism:publicationName": "Information Fusion",
+        "prism:issn": "15662535",
+        "prism:volume": "73",
+        "prism:pageRange": "22-71",
+        "prism:coverDate": "2021-09-01",
+        "prism:coverDisplayDate": "September 2021",
+        "prism:doi": "10.1016/j.inffus.2021.02.012",
+        "pii": "S156625352100035X",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Wuhan University",
+                "affiliation-city": "Wuhan",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "sh",
+        "subtypeDescription": "Short Survey",
+        "source-id": "26099",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85103284055"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85103284055?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85103284055&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85103284055&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0893608021000861"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85103284055",
+        "dc:identifier": "SCOPUS_ID:85103284055",
+        "eid": "2-s2.0-85103284055",
+        "dc:title": "Tumor attention networks: Better feature selection, better tumor segmentation",
+        "dc:creator": "Pang S.",
+        "prism:publicationName": "Neural Networks",
+        "prism:issn": "08936080",
+        "prism:eIssn": "18792782",
+        "prism:volume": "140",
+        "prism:pageRange": "203-222",
+        "prism:coverDate": "2021-08-01",
+        "prism:coverDisplayDate": "August 2021",
+        "prism:doi": "10.1016/j.neunet.2021.03.006",
+        "pii": "S0893608021000861",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Macquarie University",
+                "affiliation-city": "North Ryde",
+                "affiliation-country": "Australia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "24804",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101210512"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101210512?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85101210512&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85101210512&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85101210512",
+        "dc:identifier": "SCOPUS_ID:85101210512",
+        "eid": "2-s2.0-85101210512",
+        "dc:title": "Application and challenges of deep learning in the intelligent processing of medical images",
+        "dc:creator": "Zuo Y.",
+        "prism:publicationName": "Journal of Image and Graphics",
+        "prism:issn": "10068961",
+        "prism:volume": "26",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "305-315",
+        "prism:coverDate": "2021-02-16",
+        "prism:coverDisplayDate": "16 February 2021",
+        "prism:doi": "10.11834/jig.190470",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Shanghai for Science and Technology",
+                "affiliation-city": "Shanghai",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "21101021717",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85090980993"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85090980993?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85090980993&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85090980993&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1566253520303651"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85090980993",
+        "dc:identifier": "SCOPUS_ID:85090980993",
+        "eid": "2-s2.0-85090980993",
+        "dc:title": "A survey on deep learning in medicine: Why, how and when?",
+        "dc:creator": "Piccialli F.",
+        "prism:publicationName": "Information Fusion",
+        "prism:issn": "15662535",
+        "prism:volume": "66",
+        "prism:pageRange": "111-137",
+        "prism:coverDate": "2021-02-01",
+        "prism:coverDisplayDate": "February 2021",
+        "prism:doi": "10.1016/j.inffus.2020.09.006",
+        "pii": "S1566253520303651",
+        "citedby-count": "4",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Università degli Studi di Napoli Federico II",
+                "affiliation-city": "Naples",
+                "affiliation-country": "Italy"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "26099",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85089484002"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85089484002?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85089484002&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85089484002&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85089484002",
+        "dc:identifier": "SCOPUS_ID:85089484002",
+        "eid": "2-s2.0-85089484002",
+        "dc:title": "A deep-learning approach for foot-type classification using heterogeneous pressure data",
+        "dc:creator": "Chae J.",
+        "prism:publicationName": "Sensors (Switzerland)",
+        "prism:issn": "14248220",
+        "prism:volume": "20",
+        "prism:issueIdentifier": "16",
+        "prism:pageRange": "1-19",
+        "prism:coverDate": "2020-08-02",
+        "prism:coverDisplayDate": "2 August 2020",
+        "prism:doi": "10.3390/s20164481",
+        "citedby-count": "1",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Pusan National University",
+                "affiliation-city": "Busan",
+                "affiliation-country": "South Korea"
+            }
+        ],
+        "pubmed-id": "32796568",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "4481",
+        "source-id": "130124",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85097382351"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85097382351?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85097382351&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85097382351&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85097382351",
+        "dc:identifier": "SCOPUS_ID:85097382351",
+        "eid": "2-s2.0-85097382351",
+        "dc:title": "Wavelet Features of the Thickness Map of Retinal Ganglion Cell-Inner Plexiform Layer Best Discriminate Prior Optic Neuritis in Patients with Multiple Sclerosis",
+        "dc:creator": "Zhang J.",
+        "prism:publicationName": "IEEE Access",
+        "prism:eIssn": "21693536",
+        "prism:volume": "8",
+        "prism:pageRange": "221590-221598",
+        "prism:coverDate": "2020-01-01",
+        "prism:coverDisplayDate": "2020",
+        "prism:doi": "10.1109/ACCESS.2020.3041291",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Bascom Palmer Eye Institute",
+                "affiliation-city": "Miami",
+                "affiliation-country": "United States"
+            },
+            {
+                "@_fa": "true",
+                "affilname": "Wenzhou Medical University",
+                "affiliation-city": "Wenzhou",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "9273013",
+        "source-id": "21100374601",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85078657656"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85078657656?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85078657656&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85078657656&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85078657656",
+        "dc:identifier": "SCOPUS_ID:85078657656",
+        "eid": "2-s2.0-85078657656",
+        "dc:title": "Human Tongue Thermography Could Be a Prognostic Tool for Prescreening the Type II Diabetes Mellitus",
+        "dc:creator": "Thirunavukkarasu U.",
+        "prism:publicationName": "Evidence-based Complementary and Alternative Medicine",
+        "prism:issn": "1741427X",
+        "prism:eIssn": "17414288",
+        "prism:volume": "2020",
+        "prism:pageRange": null,
+        "prism:coverDate": "2020-01-01",
+        "prism:coverDisplayDate": "2020",
+        "prism:doi": "10.1155/2020/3186208",
+        "citedby-count": "3",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "SRM Institute of Science and Technology",
+                "affiliation-city": "Chennai",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "3186208",
+        "source-id": "130094",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85071291867"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85071291867?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85071291867&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85071291867&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85071291867",
+        "dc:identifier": "SCOPUS_ID:85071291867",
+        "eid": "2-s2.0-85071291867",
+        "dc:title": "Enhancing cardiovascular artificial intelligence (AI) research in the Netherlands: CVON-AI consortium",
+        "dc:creator": "Benjamins J.W.",
+        "prism:publicationName": "Netherlands Heart Journal",
+        "prism:issn": "15685888",
+        "prism:eIssn": "18766250",
+        "prism:volume": "27",
+        "prism:issueIdentifier": "9",
+        "prism:pageRange": "414-425",
+        "prism:coverDate": "2019-09-01",
+        "prism:coverDisplayDate": "1 September 2019",
+        "prism:doi": "10.1007/s12471-019-1281-y",
+        "citedby-count": "4",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Groningen, University Medical Center Groningen",
+                "affiliation-city": "Groningen",
+                "affiliation-country": "Netherlands"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "22520",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85070853536"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85070853536?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85070853536&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85070853536&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85070853536",
+        "dc:identifier": "SCOPUS_ID:85070853536",
+        "eid": "2-s2.0-85070853536",
+        "dc:title": "A primer in artificial intelligence in cardiovascular medicine",
+        "dc:creator": "Benjamins J.W.",
+        "prism:publicationName": "Netherlands Heart Journal",
+        "prism:issn": "15685888",
+        "prism:eIssn": "18766250",
+        "prism:volume": "27",
+        "prism:issueIdentifier": "9",
+        "prism:pageRange": "392-402",
+        "prism:coverDate": "2019-09-01",
+        "prism:coverDisplayDate": "1 September 2019",
+        "prism:doi": "10.1007/s12471-019-1286-6",
+        "citedby-count": "15",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Groningen, University Medical Center Groningen",
+                "affiliation-city": "Groningen",
+                "affiliation-country": "Netherlands"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "source-id": "22520",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85067641653"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85067641653?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85067641653&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85067641653&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85067641653",
+        "dc:identifier": "SCOPUS_ID:85067641653",
+        "eid": "2-s2.0-85067641653",
+        "dc:title": "Automated Recognition of Retinopathy of Prematurity with Deep Neural Networks",
+        "dc:creator": "Wang Y.",
+        "prism:publicationName": "Journal of Physics: Conference Series",
+        "prism:issn": "17426588",
+        "prism:eIssn": "17426596",
+        "prism:volume": "1187",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2019-05-08",
+        "prism:coverDisplayDate": "8 May 2019",
+        "prism:doi": "10.1088/1742-6596/1187/4/042057",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Sichuan University",
+                "affiliation-city": "Chengdu",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Conference Proceeding",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "article-number": "042057",
+        "source-id": "130053",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherhybridgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Hybrid Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85059799999"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85059799999?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85059799999&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85059799999&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0014480018303459"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85059799999",
+        "dc:identifier": "SCOPUS_ID:85059799999",
+        "eid": "2-s2.0-85059799999",
+        "dc:title": "Baicalin protects human retinal pigment epithelial cell lines against high glucose-induced cell injury by up-regulation of microRNA-145",
+        "dc:creator": "Dai C.",
+        "prism:publicationName": "Experimental and Molecular Pathology",
+        "prism:issn": "00144800",
+        "prism:eIssn": "10960945",
+        "prism:volume": "106",
+        "prism:pageRange": "123-130",
+        "prism:coverDate": "2019-02-01",
+        "prism:coverDisplayDate": "February 2019",
+        "prism:doi": "10.1016/j.yexmp.2019.01.002",
+        "pii": "S0014480018303459",
+        "citedby-count": "10",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Binzhou Medical College",
+                "affiliation-city": "Binzhou",
+                "affiliation-country": "China"
+            },
+            {
+                "@_fa": "true",
+                "affilname": "Shandong Provincial Hospital",
+                "affiliation-city": "Jinan",
+                "affiliation-country": "China"
+            }
+        ],
+        "pubmed-id": "30625293",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "13247",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85053556732"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85053556732?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85053556732&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85053556732&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85053556732",
+        "dc:identifier": "SCOPUS_ID:85053556732",
+        "eid": "2-s2.0-85053556732",
+        "dc:title": "Analysing the power of deep learning techniques over the traditional methods using medicare utilisation and provider data",
+        "dc:creator": "Gurupur V.P.",
+        "prism:publicationName": "Journal of Experimental and Theoretical Artificial Intelligence",
+        "prism:issn": "0952813X",
+        "prism:eIssn": "13623079",
+        "prism:volume": "31",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": "99-115",
+        "prism:coverDate": "2019-01-02",
+        "prism:coverDisplayDate": "2 January 2019",
+        "prism:doi": "10.1080/0952813X.2018.1518999",
+        "citedby-count": "5",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Central Florida",
+                "affiliation-city": "Orlando",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "24357",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069832211"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069832211?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85069832211&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85069832211&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85069832211",
+        "dc:identifier": "SCOPUS_ID:85069832211",
+        "eid": "2-s2.0-85069832211",
+        "dc:title": "Cluster analysis for diabetic retinopathy prediction using data mining techniques",
+        "dc:creator": "Anand T.",
+        "prism:publicationName": "International Journal of Business Information Systems",
+        "prism:issn": "17460972",
+        "prism:eIssn": "17460980",
+        "prism:volume": "31",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "372-390",
+        "prism:coverDate": "2019-01-01",
+        "prism:coverDisplayDate": "2019",
+        "prism:doi": "10.1504/IJBIS.2019.101113",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Amity University, Noida",
+                "affiliation-city": "Noida",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "3900148214",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069516295"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85069516295?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85069516295&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85069516295&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85069516295",
+        "dc:identifier": "SCOPUS_ID:85069516295",
+        "eid": "2-s2.0-85069516295",
+        "dc:title": "Deep learning and big datatechnologies in medical image analysis",
+        "dc:creator": "Rastogi P.",
+        "prism:publicationName": "PDGC 2018 - 2018 5th International Conference on Parallel, Distributed and Grid Computing",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9781538660263"
+            }
+        ],
+        "prism:pageRange": "60-63",
+        "prism:coverDate": "2018-12-01",
+        "prism:coverDisplayDate": "December 2018",
+        "prism:doi": "10.1109/PDGC.2018.8745750",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "The NorthCap University",
+                "affiliation-city": "Gurgaon HR,",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Conference Proceeding",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "article-number": "8745750",
+        "source-id": "21100920003",
+        "openaccess": "0",
+        "openaccessFlag": false
+    }
+]]

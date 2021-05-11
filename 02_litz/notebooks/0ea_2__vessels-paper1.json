@@ -1,0 +1,1851 @@
+[
+[
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85098709176"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85098709176?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85098709176&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85098709176&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1361841520302693"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85098709176",
+        "dc:identifier": "SCOPUS_ID:85098709176",
+        "eid": "2-s2.0-85098709176",
+        "dc:title": "A review of machine learning methods for retinal blood vessel segmentation and artery/vein classification",
+        "dc:creator": "Mookiah M.R.K.",
+        "prism:publicationName": "Medical Image Analysis",
+        "prism:issn": "13618415",
+        "prism:eIssn": "13618423",
+        "prism:volume": "68",
+        "prism:pageRange": null,
+        "prism:coverDate": "2021-02-01",
+        "prism:coverDisplayDate": "February 2021",
+        "prism:doi": "10.1016/j.media.2020.101905",
+        "pii": "S1361841520302693",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Dundee",
+                "affiliation-city": "Dundee",
+                "affiliation-country": "United Kingdom"
+            }
+        ],
+        "pubmed-id": "33385700",
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "101905",
+        "source-id": "17271",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85103567961"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85103567961?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85103567961&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85103567961&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S1350946221000264"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85103567961",
+        "dc:identifier": "SCOPUS_ID:85103567961",
+        "eid": "2-s2.0-85103567961",
+        "dc:title": "Artificial intelligence in OCT angiography",
+        "dc:creator": "Hormel T.T.",
+        "prism:publicationName": "Progress in Retinal and Eye Research",
+        "prism:issn": "13509462",
+        "prism:eIssn": "18731635",
+        "prism:pageRange": null,
+        "prism:coverDate": "2021-01-01",
+        "prism:coverDisplayDate": "2021",
+        "prism:doi": "10.1016/j.preteyeres.2021.100965",
+        "pii": "S1350946221000264",
+        "citedby-count": "0",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Oregon Health &amp; Science University",
+                "affiliation-city": "Portland",
+                "affiliation-country": "United States"
+            }
+        ],
+        "pubmed-id": "33766775",
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "100965",
+        "source-id": "15090",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101197139"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85101197139?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85101197139&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85101197139&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85101197139",
+        "dc:identifier": "SCOPUS_ID:85101197139",
+        "eid": "2-s2.0-85101197139",
+        "dc:title": "An unsupervised retinal vessel segmentation using hessian and intensity based approach",
+        "dc:creator": "Alhussein M.",
+        "prism:publicationName": "IEEE Access",
+        "prism:eIssn": "21693536",
+        "prism:volume": "8",
+        "prism:pageRange": "165056-165070",
+        "prism:coverDate": "2020-01-01",
+        "prism:coverDisplayDate": "2020",
+        "prism:doi": "10.1109/ACCESS.2020.3022943",
+        "citedby-count": "3",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "King Saud University",
+                "affiliation-city": "Riyadh",
+                "affiliation-country": "Saudi Arabia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100374601",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85083312021"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85083312021?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85083312021&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85083312021&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85083312021",
+        "dc:identifier": "SCOPUS_ID:85083312021",
+        "eid": "2-s2.0-85083312021",
+        "dc:title": "An Effective Retinal Blood Vessel Segmentation by Using Automatic Random Walks Based on Centerline Extraction",
+        "dc:creator": "Gao J.",
+        "prism:publicationName": "BioMed Research International",
+        "prism:issn": "23146133",
+        "prism:eIssn": "23146141",
+        "prism:volume": "2020",
+        "prism:pageRange": null,
+        "prism:coverDate": "2020-01-01",
+        "prism:coverDisplayDate": "2020",
+        "prism:doi": "10.1155/2020/7352129",
+        "citedby-count": "1",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Fujian Jiangxia University",
+                "affiliation-city": "Fuzhou",
+                "affiliation-country": "China"
+            }
+        ],
+        "pubmed-id": "32280699",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "7352129",
+        "source-id": "21100230018",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85074751355"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85074751355?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85074751355&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85074751355&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85074751355",
+        "dc:identifier": "SCOPUS_ID:85074751355",
+        "eid": "2-s2.0-85074751355",
+        "dc:title": "Color image segmentation using saturated RGB colors and decoupling the intensity from the hue",
+        "dc:creator": "García-Lamont F.",
+        "prism:publicationName": "Multimedia Tools and Applications",
+        "prism:issn": "13807501",
+        "prism:eIssn": "15737721",
+        "prism:volume": "79",
+        "prism:issueIdentifier": "1-2",
+        "prism:pageRange": "1555-1584",
+        "prism:coverDate": "2020-01-01",
+        "prism:coverDisplayDate": "1 January 2020",
+        "prism:doi": "10.1007/s11042-019-08278-6",
+        "citedby-count": "2",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Universidad Autónoma del Estado de México",
+                "affiliation-city": "Toluca",
+                "affiliation-country": "Mexico"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "25627",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85071246997"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85071246997?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85071246997&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85071246997&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85071246997",
+        "dc:identifier": "SCOPUS_ID:85071246997",
+        "eid": "2-s2.0-85071246997",
+        "dc:title": "Blood vessel segmentation of retinal image using Clifford matched filter and Clifford convolution",
+        "dc:creator": "Roy S.",
+        "prism:publicationName": "Multimedia Tools and Applications",
+        "prism:issn": "13807501",
+        "prism:eIssn": "15737721",
+        "prism:volume": "78",
+        "prism:issueIdentifier": "24",
+        "prism:pageRange": "34839-34865",
+        "prism:coverDate": "2019-12-01",
+        "prism:coverDisplayDate": "1 December 2019",
+        "prism:doi": "10.1007/s11042-019-08111-0",
+        "citedby-count": "3",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Calcutta",
+                "affiliation-city": "Kolkata",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "25627",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85038019585"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85038019585?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85038019585&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85038019585&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85038019585",
+        "dc:identifier": "SCOPUS_ID:85038019585",
+        "eid": "2-s2.0-85038019585",
+        "dc:title": "Segmentation of blood vessels using rule-based and machine-learning-based methods: a review",
+        "dc:creator": "Zhao F.",
+        "prism:publicationName": "Multimedia Systems",
+        "prism:issn": "09424962",
+        "prism:volume": "25",
+        "prism:issueIdentifier": "2",
+        "prism:pageRange": "109-118",
+        "prism:coverDate": "2019-04-01",
+        "prism:coverDisplayDate": "1 April 2019",
+        "prism:doi": "10.1007/s00530-017-0580-7",
+        "citedby-count": "17",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Northwest University",
+                "affiliation-city": "Xi'an",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "source-id": "25626",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85077340872"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85077340872?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85077340872&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85077340872&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85077340872",
+        "dc:identifier": "SCOPUS_ID:85077340872",
+        "eid": "2-s2.0-85077340872",
+        "dc:title": "Going deep in medical image analysis: Concepts, methods, challenges, and future directions",
+        "dc:creator": "Altaf F.",
+        "prism:publicationName": "IEEE Access",
+        "prism:eIssn": "21693536",
+        "prism:volume": "7",
+        "prism:pageRange": "99540-99572",
+        "prism:coverDate": "2019-01-01",
+        "prism:coverDisplayDate": "2019",
+        "prism:doi": "10.1109/ACCESS.2019.2929365",
+        "citedby-count": "26",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Edith Cowan University",
+                "affiliation-city": "Perth",
+                "affiliation-country": "Australia"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "2929365",
+        "source-id": "21100374601",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryam"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85048261744"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85048261744?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85048261744&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85048261744&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85048261744",
+        "dc:identifier": "SCOPUS_ID:85048261744",
+        "eid": "2-s2.0-85048261744",
+        "dc:title": "A review on biomedical image analysis",
+        "dc:creator": "Renukalatha S.",
+        "prism:publicationName": "Biomedical Engineering - Applications, Basis and Communications",
+        "prism:issn": "10162372",
+        "prism:volume": "30",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": null,
+        "prism:coverDate": "2018-08-01",
+        "prism:coverDisplayDate": "1 August 2018",
+        "prism:doi": "10.4015/S1016237218300018",
+        "citedby-count": "5",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Sri Siddhartha Institute of Technology",
+                "affiliation-city": "Tumkur",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "re",
+        "subtypeDescription": "Review",
+        "article-number": "1830001",
+        "source-id": "92049",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85072897193"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85072897193?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85072897193&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85072897193&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85072897193",
+        "dc:identifier": "SCOPUS_ID:85072897193",
+        "eid": "2-s2.0-85072897193",
+        "dc:title": "MRI brain tumor segmentation",
+        "dc:creator": "Alhazmi A.H.",
+        "prism:publicationName": "Proceedings of the 2018 International Conference on Image Processing, Computer Vision, and Pattern Recognition, IPCV 2018",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "1601324855"
+            },
+            {
+                "@_fa": "true",
+                "$": "9781601324856"
+            }
+        ],
+        "prism:pageRange": "53-59",
+        "prism:coverDate": "2018-01-01",
+        "prism:coverDisplayDate": "2018",
+        "citedby-count": "1",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Colorado Boulder",
+                "affiliation-city": "Boulder",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Conference Proceeding",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "source-id": "21100959547",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85028327168"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85028327168?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85028327168&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85028327168&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0169260716314201"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85028327168",
+        "dc:identifier": "SCOPUS_ID:85028327168",
+        "eid": "2-s2.0-85028327168",
+        "dc:title": "Vascular tree tracking and bifurcation points detection in retinal images using a hierarchical probabilistic model",
+        "dc:creator": "Kalaie S.",
+        "prism:publicationName": "Computer Methods and Programs in Biomedicine",
+        "prism:issn": "01692607",
+        "prism:eIssn": "18727565",
+        "prism:volume": "151",
+        "prism:pageRange": "139-149",
+        "prism:coverDate": "2017-11-01",
+        "prism:coverDisplayDate": "November 2017",
+        "prism:doi": "10.1016/j.cmpb.2017.08.018",
+        "pii": "S0169260716314201",
+        "citedby-count": "9",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Tarbiat Modares University",
+                "affiliation-city": "Tehran",
+                "affiliation-country": "Iran"
+            }
+        ],
+        "pubmed-id": "28946995",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "23604",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                },
+                {
+                    "$": "repositoryam"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85033677373"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85033677373?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85033677373&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85033677373&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85033677373",
+        "dc:identifier": "SCOPUS_ID:85033677373",
+        "eid": "2-s2.0-85033677373",
+        "dc:title": "Automatic detection of optic disc and blood vessel in retinal images using morphological operations and ipachi model",
+        "dc:creator": "Ganesan P.",
+        "prism:publicationName": "Research Journal of Pharmacy and Technology",
+        "prism:issn": "09743618",
+        "prism:eIssn": "0974360X",
+        "prism:volume": "10",
+        "prism:issueIdentifier": "8",
+        "prism:pageRange": "2602-2606",
+        "prism:coverDate": "2017-08-01",
+        "prism:coverDisplayDate": "August 2017",
+        "prism:doi": "10.5958/0974-360X.2017.00461.9",
+        "citedby-count": "5",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Vidya Jyothi Institute of Technology",
+                "affiliation-city": "Hyderabad",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100197160",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85009164603"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85009164603?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85009164603&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85009164603&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0950705116304786"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85009164603",
+        "dc:identifier": "SCOPUS_ID:85009164603",
+        "eid": "2-s2.0-85009164603",
+        "dc:title": "Performance analysis of descriptive statistical features in retinal vessel segmentation via fuzzy logic, ANN, SVM, and classifier fusion",
+        "dc:creator": "Barkana B.",
+        "prism:publicationName": "Knowledge-Based Systems",
+        "prism:issn": "09507051",
+        "prism:volume": "118",
+        "prism:pageRange": "165-176",
+        "prism:coverDate": "2017-02-15",
+        "prism:coverDisplayDate": "15 February 2017",
+        "prism:doi": "10.1016/j.knosys.2016.11.022",
+        "pii": "S0950705116304786",
+        "citedby-count": "61",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of Bridgeport",
+                "affiliation-city": "Bridgeport",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "24772",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85042165634"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85042165634?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85042165634&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85042165634&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85042165634",
+        "dc:identifier": "SCOPUS_ID:85042165634",
+        "eid": "2-s2.0-85042165634",
+        "dc:title": "Retina Image Vessel Segmentation Using a Hybrid CGLI Level Set Method",
+        "dc:creator": "Chen G.",
+        "prism:publicationName": "BioMed Research International",
+        "prism:issn": "23146133",
+        "prism:eIssn": "23146141",
+        "prism:volume": "2017",
+        "prism:pageRange": null,
+        "prism:coverDate": "2017-01-01",
+        "prism:coverDisplayDate": "2017",
+        "prism:doi": "10.1155/2017/1263056",
+        "citedby-count": "10",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Fujian Normal University",
+                "affiliation-city": "Fuzhou",
+                "affiliation-country": "China"
+            }
+        ],
+        "pubmed-id": "28840122",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "1263056",
+        "source-id": "21100230018",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                },
+                {
+                    "$": "repositoryam"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84994894109"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84994894109?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84994894109&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84994894109&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0031320316301704"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84994894109",
+        "dc:identifier": "SCOPUS_ID:84994894109",
+        "eid": "2-s2.0-84994894109",
+        "dc:title": "A survey on curvilinear object segmentation in multiple applications",
+        "dc:creator": "Bibiloni P.",
+        "prism:publicationName": "Pattern Recognition",
+        "prism:issn": "00313203",
+        "prism:volume": "60",
+        "prism:pageRange": "949-970",
+        "prism:coverDate": "2016-12-01",
+        "prism:coverDisplayDate": "1 December 2016",
+        "prism:doi": "10.1016/j.patcog.2016.07.023",
+        "pii": "S0031320316301704",
+        "citedby-count": "22",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Universitat de les Illes Balears",
+                "affiliation-city": "Palma",
+                "affiliation-country": "Spain"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "24823",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84952946730"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84952946730?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84952946730&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84952946730&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S136184151500184X"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84952946730",
+        "dc:identifier": "SCOPUS_ID:84952946730",
+        "eid": "2-s2.0-84952946730",
+        "dc:title": "A self-calibrating approach for the segmentation of retinal vessels by template matching and contour reconstruction",
+        "dc:creator": "Kovács G.",
+        "prism:publicationName": "Medical Image Analysis",
+        "prism:issn": "13618415",
+        "prism:eIssn": "13618423",
+        "prism:volume": "29",
+        "prism:pageRange": "24-46",
+        "prism:coverDate": "2016-04-01",
+        "prism:coverDisplayDate": "April 01, 2016",
+        "prism:doi": "10.1016/j.media.2015.12.003",
+        "pii": "S136184151500184X",
+        "citedby-count": "27",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Debreceni Egyetem Informatikai Kar",
+                "affiliation-city": "Debrecen",
+                "affiliation-country": "Hungary"
+            }
+        ],
+        "pubmed-id": "26766207",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "17271",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryam"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84942614180"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84942614180?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84942614180&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84942614180&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0010482515003169"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84942614180",
+        "dc:identifier": "SCOPUS_ID:84942614180",
+        "eid": "2-s2.0-84942614180",
+        "dc:title": "Segmentation of retinal vessels by means of directional response vector similarity and region growing",
+        "dc:creator": "Lázár I.",
+        "prism:publicationName": "Computers in Biology and Medicine",
+        "prism:issn": "00104825",
+        "prism:eIssn": "18790534",
+        "prism:volume": "66",
+        "prism:pageRange": "209-221",
+        "prism:coverDate": "2015-11-01",
+        "prism:coverDisplayDate": "November 01, 2015",
+        "prism:doi": "10.1016/j.compbiomed.2015.09.008",
+        "pii": "S0010482515003169",
+        "citedby-count": "38",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Debreceni Egyetem Informatikai Kar",
+                "affiliation-city": "Debrecen",
+                "affiliation-country": "Hungary"
+            }
+        ],
+        "pubmed-id": "26432200",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "17957",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84943637068"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84943637068?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84943637068&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84943637068&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84943637068",
+        "dc:identifier": "SCOPUS_ID:84943637068",
+        "eid": "2-s2.0-84943637068",
+        "dc:title": "Blood vessel segmentation of retinal images based on neural network",
+        "dc:creator": "Zhang J.",
+        "prism:publicationName": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+        "prism:issn": "03029743",
+        "prism:eIssn": "16113349",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9783319219622"
+            }
+        ],
+        "prism:volume": "9218",
+        "prism:pageRange": "11-17",
+        "prism:coverDate": "2015-01-01",
+        "prism:coverDisplayDate": "2015",
+        "prism:doi": "10.1007/978-3-319-21963-9_2",
+        "citedby-count": "32",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "ShenZhen Institute of Information Technology",
+                "affiliation-city": "Shenzhen",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Book Series",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "source-id": "25674",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfree2read"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Bronze"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84934783118"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84934783118?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84934783118&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84934783118&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84934783118",
+        "dc:identifier": "SCOPUS_ID:84934783118",
+        "eid": "2-s2.0-84934783118",
+        "dc:title": "State-of-the-art in medical image segmentation",
+        "dc:creator": "Jiang G.",
+        "prism:publicationName": "Jisuanji Xuebao/Chinese Journal of Computers",
+        "prism:issn": "02544164",
+        "prism:volume": "38",
+        "prism:issueIdentifier": "6",
+        "prism:pageRange": "1222-1242",
+        "prism:coverDate": "2015-01-01",
+        "prism:coverDisplayDate": "1 June 2015",
+        "prism:doi": "10.11897/SP.J.1016.2015.01222",
+        "citedby-count": "16",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Southern Medical University",
+                "affiliation-city": "Guangzhou",
+                "affiliation-country": "China"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "26131",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84938088395"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84938088395?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84938088395&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84938088395&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84938088395",
+        "dc:identifier": "SCOPUS_ID:84938088395",
+        "eid": "2-s2.0-84938088395",
+        "dc:title": "Structure-based level set method for automatic retinal vasculature segmentation",
+        "dc:creator": "Dizdaroğlu B.",
+        "prism:publicationName": "Eurasip Journal on Image and Video Processing",
+        "prism:issn": "16875176",
+        "prism:eIssn": "16875281",
+        "prism:volume": "2014",
+        "prism:issueIdentifier": "1",
+        "prism:pageRange": null,
+        "prism:coverDate": "2014-08-11",
+        "prism:coverDisplayDate": "11 August 2014",
+        "prism:doi": "10.1186/1687-5281-2014-39",
+        "citedby-count": "18",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Northeastern University",
+                "affiliation-city": "Boston",
+                "affiliation-country": "United States"
+            },
+            {
+                "@_fa": "true",
+                "affilname": "Karadeniz Technical University",
+                "affiliation-city": "Trabzon",
+                "affiliation-country": "Turkey"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "39",
+        "source-id": "5200152707",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84958532967"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84958532967?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84958532967&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84958532967&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84958532967",
+        "dc:identifier": "SCOPUS_ID:84958532967",
+        "eid": "2-s2.0-84958532967",
+        "dc:title": "Unsupervised segmentation of blood vessels from colour retinal fundus images",
+        "dc:creator": "Yin X.",
+        "prism:publicationName": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+        "prism:issn": "03029743",
+        "prism:eIssn": "16113349",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9783319062686"
+            }
+        ],
+        "prism:volume": "8423 LNCS",
+        "prism:pageRange": "194-203",
+        "prism:coverDate": "2014-01-01",
+        "prism:coverDisplayDate": "2014",
+        "prism:doi": "10.1007/978-3-319-06269-3_21",
+        "citedby-count": "3",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Victoria University",
+                "affiliation-city": "Footscray",
+                "affiliation-country": "Australia"
+            }
+        ],
+        "prism:aggregationType": "Book Series",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "source-id": "25674",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84899060005"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84899060005?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84899060005&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84899060005&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "full-text",
+                "@href": "https://api.elsevier.com/content/article/eid/1-s2.0-S0169260714000649"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84899060005",
+        "dc:identifier": "SCOPUS_ID:84899060005",
+        "eid": "2-s2.0-84899060005",
+        "dc:title": "A non-parametric segmentation methodology for oral videocapillaroscopic images",
+        "dc:creator": "Bellavia F.",
+        "prism:publicationName": "Computer Methods and Programs in Biomedicine",
+        "prism:issn": "01692607",
+        "prism:eIssn": "18727565",
+        "prism:volume": "114",
+        "prism:issueIdentifier": "3",
+        "prism:pageRange": "240-246",
+        "prism:coverDate": "2014-01-01",
+        "prism:coverDisplayDate": "May 2014",
+        "prism:doi": "10.1016/j.cmpb.2014.02.009",
+        "pii": "S0169260714000649",
+        "citedby-count": "10",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Università degli Studi di Palermo",
+                "affiliation-city": "Palermo",
+                "affiliation-country": "Italy"
+            }
+        ],
+        "pubmed-id": "24657094",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "23604",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84881516200"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84881516200?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84881516200&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84881516200&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84881516200",
+        "dc:identifier": "SCOPUS_ID:84881516200",
+        "eid": "2-s2.0-84881516200",
+        "dc:title": "Bayesian method with spatial constraint for retinal vessel segmentation",
+        "dc:creator": "Xiao Z.",
+        "prism:publicationName": "Computational and Mathematical Methods in Medicine",
+        "prism:issn": "1748670X",
+        "prism:eIssn": "17486718",
+        "prism:volume": "2013",
+        "prism:pageRange": null,
+        "prism:coverDate": "2013-08-20",
+        "prism:coverDisplayDate": "2013",
+        "prism:doi": "10.1155/2013/401413",
+        "citedby-count": "21",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "CNRS Centre National de la Recherche Scientifique",
+                "affiliation-city": "Paris",
+                "affiliation-country": "France"
+            }
+        ],
+        "pubmed-id": "23935699",
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "article-number": "401413",
+        "source-id": "11000153760",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryvor"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84894271159"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84894271159?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84894271159&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84894271159&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84894271159",
+        "dc:identifier": "SCOPUS_ID:84894271159",
+        "eid": "2-s2.0-84894271159",
+        "dc:title": "Gradient features and optimal thresholding for retinal blood vessel segmentation",
+        "dc:creator": "Patankar S.",
+        "prism:publicationName": "2013 IEEE International Conference on Computational Intelligence and Computing Research, IEEE ICCIC 2013",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9781479915972"
+            }
+        ],
+        "prism:pageRange": null,
+        "prism:coverDate": "2013-01-01",
+        "prism:coverDisplayDate": "2013",
+        "prism:doi": "10.1109/ICCIC.2013.6724116",
+        "citedby-count": "4",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Vishwakarma Institute of Technology",
+                "affiliation-city": "Pune",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Conference Proceeding",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "article-number": "6724116",
+        "source-id": "21100286918",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84907423172"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/84907423172?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=84907423172&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=84907423172&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/84907423172",
+        "dc:identifier": "SCOPUS_ID:84907423172",
+        "eid": "2-s2.0-84907423172",
+        "dc:title": "Methods for digital analysis of human vascular system. Literature review",
+        "dc:creator": "Ilyasova N.Y.",
+        "prism:publicationName": "Computer Optics",
+        "prism:issn": "01342452",
+        "prism:volume": "37",
+        "prism:issueIdentifier": "4",
+        "prism:pageRange": "511-535",
+        "prism:coverDate": "2013-01-01",
+        "prism:coverDisplayDate": "1 January 2013",
+        "prism:doi": "10.18287/0134-2452-2013-37-4-511-535",
+        "citedby-count": "44",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "Russian Academy of Sciences",
+                "affiliation-city": "Moscow",
+                "affiliation-country": "Russian Federation"
+            }
+        ],
+        "prism:aggregationType": "Journal",
+        "subtype": "ar",
+        "subtypeDescription": "Article",
+        "source-id": "21100203110",
+        "openaccess": "1",
+        "openaccessFlag": true,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "publisherfullgold"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Gold"
+                }
+            ]
+        }
+    }
+],
+[
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/78650038728"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/78650038728?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=78650038728&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=78650038728&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/78650038728",
+        "dc:identifier": "SCOPUS_ID:78650038728",
+        "eid": "2-s2.0-78650038728",
+        "dc:title": "Advanced Biomedical Image Analysis",
+        "dc:creator": "Haidekker M.A.",
+        "prism:publicationName": "Advanced Biomedical Image Analysis",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9780470624586"
+            }
+        ],
+        "prism:pageRange": null,
+        "prism:coverDate": "2010-10-12",
+        "prism:coverDisplayDate": "12 October 2010",
+        "prism:doi": "10.1002/9780470872093",
+        "citedby-count": "59",
+        "prism:aggregationType": "Book",
+        "subtype": "bk",
+        "subtypeDescription": "Book",
+        "source-id": "21100265762",
+        "openaccess": "0",
+        "openaccessFlag": false
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85058588751"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/85058588751?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=85058588751&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=85058588751&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/85058588751",
+        "dc:identifier": "SCOPUS_ID:85058588751",
+        "eid": "2-s2.0-85058588751",
+        "dc:title": "Becker-Shaffer's Diagnosis and Therapy of the Glaucomas",
+        "dc:creator": "Stamper R.L.",
+        "prism:publicationName": "Becker-Shaffer's Diagnosis and Therapy of the Glaucomas",
+        "prism:isbn": [
+            {
+                "@_fa": "true",
+                "$": "9780323023948"
+            }
+        ],
+        "prism:pageRange": null,
+        "prism:coverDate": "2009-01-01",
+        "prism:coverDisplayDate": "2009",
+        "prism:doi": "10.1016/B978-0-323-02394-8.X0001-0",
+        "citedby-count": "29",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "University of California, San Francisco",
+                "affiliation-city": "San Francisco",
+                "affiliation-country": "United States"
+            }
+        ],
+        "prism:aggregationType": "Book",
+        "subtype": "bk",
+        "subtypeDescription": "Book",
+        "source-id": "21100891450",
+        "openaccess": "0",
+        "openaccessFlag": false,
+        "freetoread": {
+            "value": [
+                {
+                    "$": "all"
+                },
+                {
+                    "$": "repository"
+                },
+                {
+                    "$": "repositoryam"
+                }
+            ]
+        },
+        "freetoreadLabel": {
+            "value": [
+                {
+                    "$": "All Open Access"
+                },
+                {
+                    "$": "Green"
+                }
+            ]
+        }
+    },
+    {
+        "@_fa": "true",
+        "link": [
+            {
+                "@_fa": "true",
+                "@ref": "self",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/69949143562"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "author-affiliation",
+                "@href": "https://api.elsevier.com/content/abstract/scopus_id/69949143562?field=author,affiliation"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus",
+                "@href": "https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&scp=69949143562&origin=inward"
+            },
+            {
+                "@_fa": "true",
+                "@ref": "scopus-citedby",
+                "@href": "https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&scp=69949143562&origin=inward"
+            }
+        ],
+        "prism:url": "https://api.elsevier.com/content/abstract/scopus_id/69949143562",
+        "dc:identifier": "SCOPUS_ID:69949143562",
+        "eid": "2-s2.0-69949143562",
+        "dc:title": "Retinal vessel segmentation using local relative entropy thresholding",
+        "dc:creator": "Kande G.",
+        "prism:publicationName": "Conference Proceedings - IEEE International Conference on Systems, Man and Cybernetics",
+        "prism:issn": "1062922X",
+        "prism:pageRange": "3448-3453",
+        "prism:coverDate": "2008-12-01",
+        "prism:coverDisplayDate": "2008",
+        "prism:doi": "10.1109/ICSMC.2008.4811831",
+        "citedby-count": "6",
+        "affiliation": [
+            {
+                "@_fa": "true",
+                "affilname": "SRK Institute of Technology",
+                "affiliation-city": "Vijayawada",
+                "affiliation-country": "India"
+            }
+        ],
+        "prism:aggregationType": "Conference Proceeding",
+        "subtype": "cp",
+        "subtypeDescription": "Conference Paper",
+        "article-number": "4811831",
+        "source-id": "145097",
+        "openaccess": "0",
+        "openaccessFlag": false
+    }
+]
+]
